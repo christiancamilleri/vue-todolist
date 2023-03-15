@@ -25,11 +25,18 @@ createApp({
             done: false,
         }
       ],
+      newToDo: {
+        text: "",
+        done: false,
+      }
     }
   },
   methods: {
      removeText(index) {
         this.toDo.splice(index, 1)
+     },
+     addNewToDo() {
+        this.toDo.push(this.newToDo);
      }
   }
 
