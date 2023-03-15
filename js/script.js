@@ -37,6 +37,7 @@ createApp({
      },
      addNewToDo() {
         this.toDo.push(this.newToDo);
+        this.newToDo = ""
      }
   }
 

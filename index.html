@@ -15,7 +15,7 @@
             </li>
            
         </ul>
-        <input type="text" v-model="newToDo.text" placeholder="Che cosa devi fare oggi?" id="">
+        <input type="text" v-model="newToDo.text" @keyup.enter="addNewToDo()" placeholder="Che cosa devi fare oggi?" id="">
         <button @click="addNewToDo()">Aggiungi</button>   
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
