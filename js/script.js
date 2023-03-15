@@ -46,15 +46,15 @@ createApp({
           }
         
      },
-     changeDone() {
-        if(this.toDo.done) {
-            this.toDo.done = false
+     changeDone(index) {
+        if(this.toDo[index].done) {
+            this.toDo[index].done = false;
             console.log("false")
         } else {
-            this.toDo.done = true
+            this.toDo[index].done = true;
             console.log("vero")
         }
-        console.log("ciao")
+        
      }
   }
 

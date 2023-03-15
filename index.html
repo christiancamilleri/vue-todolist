@@ -9,8 +9,8 @@
 <body>
     <div id="app">
         <ul>
-            <li  v-for="(toDo, index) in toDo" :style="toDo.done ? {textDecoration:'line-through' } : ``"  >
-                <span @click="changeDone()">{{toDo.text}}  </span>
+            <li  v-for="(toDo, index) in toDo" :style="toDo.done ? {textDecoration:'line-through' } :  ``"  >
+                <span @click="changeDone(index)">{{toDo.text}}  </span>
                 <span @click="removeText(index)">X</span>
             </li>
            
