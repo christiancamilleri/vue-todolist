@@ -36,8 +36,25 @@ createApp({
         this.toDo.splice(index, 1)
      },
      addNewToDo() {
-        this.toDo.push(this.newToDo);
-        this.newToDo = ""
+        // memorizzo in una variabile
+        createToDo = this.newToDo
+        this.toDo.push(createToDo);
+
+        this.newToDo = {
+            text: "",
+            done: false,
+          }
+        
+     },
+     changeDone() {
+        if(this.toDo.done) {
+            this.toDo.done = false
+            console.log("false")
+        } else {
+            this.toDo.done = true
+            console.log("vero")
+        }
+        console.log("ciao")
      }
   }
 
