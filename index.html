@@ -9,15 +9,10 @@
 <body>
     <div id="app">
         <ul>
-            <li>
-                {{toDo[0].text}}
+            <li v-for="(toDo, index) in toDo" :style="toDo.done ? {textDecoration:'line-through' } : ``" >
+                {{toDo.text}} <span @click="removeText(index)">X</span>
             </li>
-            <li>
-                {{toDo[1].text}}
-            </li>
-            <li  :style="toDo[2].done ? {textDecoration:'line-through' } : ``">
-                {{ toDo[2].text}}
-            </li>
+           
         </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
